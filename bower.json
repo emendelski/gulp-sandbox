@@ -1,0 +1,24 @@
+{
+  "name": "sandbox",
+  "description": "Gulp sandbox for HTML/SCSS/JS",
+  "version": "0.1.0",
+  "main": "app.js",
+  "authors": [
+    "Kamil Mendelski",
+    "Frontlabs.pl"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6",
+    "jquery": "^3.2.1"
+  }
+}

@@ -1,0 +1,19 @@
+@mixin font-face($name, $filename, $path, $weight: normal, $style: normal){
+    @font-face {
+        font-family: $name;
+            src: url('#{$path}/#{$filename}.eot');
+            src: url('#{$path}/#{$filename}.eot?#iefix') format('embedded-opentype'),
+                 url('#{$path}/#{$filename}.woff2') format('woff2'),
+                 url('#{$path}/#{$filename}.woff') format('woff'),
+                 url('#{$path}/#{$filename}.ttf') format('truetype'),
+                 url('#{$path}/#{$filename}.svg##{$filename} ') format('svg');
+            font-weight: $weight;
+            font-style: $style;
+            font-stretch: normal;
+            unicode-range: U+0020-FB04;
+    }
+}
+
+@function rem($number, $font-size: 14px){
+    @return ($number / $font-size) * 1rem;
+}
