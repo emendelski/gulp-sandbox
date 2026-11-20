@@ -55,7 +55,7 @@ export const styles = () =>
         quietDeps: true,
         silenceDeprecations: ['import'],
         loadPaths: ['node_modules'],
-      }).on('error', logError)
+      }).on('error', logError),
     )
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest(paths.styles.dest, {sourcemaps: '.'}))
@@ -71,13 +71,12 @@ export const scripts = () =>
         minify: true,
         sourcemap: true,
         target: 'es2022',
-      })
+      }),
     )
     .on('error', logError)
     .pipe(dest(paths.scripts.dest));
 
-export const fonts = () =>
-  src(paths.fonts.src, {encoding: false}).pipe(dest(paths.fonts.dest));
+export const fonts = () => src(paths.fonts.src, {encoding: false}).pipe(dest(paths.fonts.dest));
 
 export const images = () =>
   src(paths.images.src, {encoding: false})
