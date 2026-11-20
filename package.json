@@ -38,7 +38,6 @@
     "gulp-changed": "^5.0.4",
     "gulp-cli": "^3.1.0",
     "gulp-esbuild": "^0.15.0",
-    "gulp-imagemin": "^9.2.0",
     "gulp-postcss": "^10.0.0",
     "gulp-sass": "^6.0.1",
     "postcss": "^8.5.33",
@@ -49,9 +48,6 @@
   },
   "allowScripts": {
     "esbuild": true,
-    "gifsicle": true,
-    "mozjpeg": true,
-    "optipng-bin": true,
     "fsevents": false
   }
 }

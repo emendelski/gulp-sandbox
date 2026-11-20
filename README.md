@@ -10,7 +10,6 @@
 - **[Bootstrap 5.3](https://getbootstrap.com/)** compiled from Sass (sass-embedded) with
   [Autoprefixer](https://github.com/postcss/autoprefixer) and [cssnano](https://cssnano.github.io/cssnano/)
 - **[esbuild](https://esbuild.github.io/)** bundling and minifying JavaScript
-- **[imagemin](https://github.com/sindresorhus/gulp-imagemin)** optimizing PNG, JPEG, GIF and SVG
 - Self-hosted [Inter](https://fontsource.org/fonts/inter) variable font
 - **[ESLint](https://eslint.org/)**, **[Stylelint](https://stylelint.io/)** and
   **[Prettier](https://prettier.io/)**
@@ -44,7 +43,7 @@ npm run format
 - `src/scss/style.scss` – stylesheet entry; Bootstrap overrides go to `_variables.scss`, and
   `lib/_bootstrap.scss` selects which Bootstrap parts are compiled
 - `src/js/main.js` – JavaScript entry, bundled into `assets/js/app.js`
-- `src/images/` – images, optimized into `assets/images/`
+- `src/images/` – images, copied to `assets/images/` (optimize them before adding)
 - `assets/` – build output (ignored by git)
 
 Browser targets come from the `browserslist` field in `package.json`.

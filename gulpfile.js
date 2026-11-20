@@ -5,7 +5,6 @@ import {deleteAsync} from 'del';
 import gulp from 'gulp';
 import changed from 'gulp-changed';
 import {gulpEsbuild as esbuild} from 'gulp-esbuild';
-import imagemin from 'gulp-imagemin';
 import postcss from 'gulp-postcss';
 import gulpSass from 'gulp-sass';
 import * as sassCompiler from 'sass-embedded';
@@ -26,7 +25,7 @@ const paths = {
     dest: 'assets/js',
   },
   images: {
-    src: 'src/images/**/*.{png,jpg,jpeg,gif,svg}',
+    src: 'src/images/**/*.{png,jpg,jpeg,gif,svg,webp,avif}',
     dest: 'assets/images',
   },
   // Inter's @font-face rules are inlined into style.css and point at ./files/.
@@ -81,7 +80,6 @@ export const fonts = () => src(paths.fonts.src, {encoding: false}).pipe(dest(pat
 export const images = () =>
   src(paths.images.src, {encoding: false})
     .pipe(changed(paths.images.dest))
-    .pipe(imagemin())
     .pipe(dest(paths.images.dest));
 
 const reload = done => {
