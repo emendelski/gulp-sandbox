@@ -1,0 +1,29 @@
+/*!
+ * Theme Name: Gulp Sandbox
+ * Author: FrontLabs
+ * Author URI: https://frontlabs.pl
+ * Author Contact: kontakt@frontlabs.pl
+ */
+
+@use '@fontsource-variable/inter/index';
+@use 'lib/bootstrap' as bs;
+@use 'functions' as fn;
+
+/* === CORE
+=================================== */
+html {
+  font-size: 14px;
+
+  @include bs.media-breakpoint-down(md) {
+    font-size: 13px;
+  }
+}
+
+body {
+  &.overflow-hidden {
+    overflow: hidden;
+  }
+}
+
+/* === COMMON
+=================================== */

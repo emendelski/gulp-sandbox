@@ -1,0 +1,8 @@
+// Bootstrap overrides: any variable from bootstrap/scss/_variables.scss.
+// Loaded before Bootstrap's own defaults (see lib/_bootstrap.scss).
+$font-family-sans-serif:
+  'Inter Variable',
+  system-ui,
+  -apple-system,
+  'Segoe UI',
+  sans-serif;
